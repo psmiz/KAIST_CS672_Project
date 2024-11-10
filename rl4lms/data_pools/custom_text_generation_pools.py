@@ -24,12 +24,13 @@ class Interscript(TextGenPool):
         max_size: int = None,
     ):
         # Read the data
+        os = getenv('HOME')        
         if split == "train":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/interscript/train_n1158_target_edit_numeric_group_goal_steps_{stage}.json"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/interscript/train_n1158_target_edit_numeric_group_goal_steps_{stage}.json"
         elif split == "val":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/interscript/dev_n190_target_edit_numeric_group_goal_steps_{stage}.json"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/interscript/dev_n190_target_edit_numeric_group_goal_steps_{stage}.json"
         elif split == "test":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/interscript/test_n678_target_edit_numeric_group_goal_steps_{stage}.json"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/interscript/test_n678_target_edit_numeric_group_goal_steps_{stage}.json"
         else:
             raise ValueError("Split not supported")
 
@@ -66,13 +67,15 @@ class OpenAISumm(TextGenPool):
         truncate_article: int = None,
         max_size: int = None,
     ):
+        
+        HOME = os.getenv('HOME')
         # Read the data
         if split == "train":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/openai_summ/topic/train_passage_question_answer_2_{stage}.json"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/openai_summ/topic/train_passage_question_answer_2_{stage}.json"
         elif split == "val":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/openai_summ/topic/dev_passage_question_answer_2_{stage}.json"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/openai_summ/topic/dev_passage_question_answer_2_{stage}.json"
         elif split == "test":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/openai_summ/topic/test_passage_question_answer_2_{stage}.json"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/openai_summ/topic/test_passage_question_answer_2_{stage}.json"
         else:
             raise ValueError("Split not supported")
 
@@ -109,13 +112,15 @@ class Alphabetize(TextGenPool):
         truncate_article: int = None,
         max_size: int = None,
     ):
+        
+        HOME = os.getenv('HOME')
         # Read the data
         if split == "train":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/alphabetize/train_{stage}.jsonl"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/alphabetize/train_{stage}.jsonl"
         elif split == "val":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/alphabetize/dev_{stage}.jsonl"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/alphabetize/dev_{stage}.jsonl"
         elif split == "test":
-            pth = f"/projectnb/llamagrp/feyzanb/feedback/data/alphabetize/test_{stage}.jsonl"
+            pth = f"{HOME}/KAIST_CS672_Project/feedback/data/alphabetize/test_{stage}.jsonl"
         else:
             raise ValueError("Split not supported")
 
