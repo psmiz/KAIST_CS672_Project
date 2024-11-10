@@ -1,8 +1,11 @@
-# Ignore virtual environment directory
 venv/
 
-# Ignore API key files
 wandb_key
 openai_key
 
 rl4lms.egg-info/
+wandb/
+__pycache__/
+*.pyc
+*.pyo
+
