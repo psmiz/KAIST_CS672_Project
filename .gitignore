@@ -5,6 +5,8 @@ openai_key
 
 rl4lms.egg-info/
 wandb/
+alphabetize_output/
+
 __pycache__/
 *.pyc
 *.pyo
