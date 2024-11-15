@@ -22,5 +22,5 @@ WANDB_API_KEY=INSERT_WANDB_KEY_HERE python scripts/training/train_text_generatio
 --config_path scripts/training/task_configs/openai_summ/t5_ppo_on_supervised.yml \
 --project_name $PROJECT_NAME \
 --experiment_name $EXPERIMENT_NAME \
---entity_name feyzaakyurek \
+--entity_name fisma-korea-advanced-institute-of-science-and-technology \
 --log_to_wandb > $BASE_PATH/$PROJECT_NAME/$EXPERIMENT_NAME/log.out 2>&1

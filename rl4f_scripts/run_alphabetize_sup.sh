@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 # Base path to store the outputs.
-BASE_PATH="/projectnb/llamagrp/feyzanb/feedback/alphabetize_output"
+BASE_PATH="./feedback/alphabetize_output"
 
 # Name of the project and experiment for wandb.
 PROJECT_NAME="rl4f_alphabetize_sup"
@@ -11,7 +11,7 @@ EXPERIMENT_NAME="t5large_bs32_wd0.01_lr1e-5_beam5_min5_max_20_seed0"
 WANDB_KEY=$(<wandb_key)
 
 # Wandb entity name.
-WANDB_ENTITY=feyzaakyurek
+WANDB_ENTITY=fisma-korea-advanced-institute-of-science-and-technology
 
 # Create the directory to store the results.
 mkdir -p $BASE_PATH/$PROJECT_NAME/$EXPERIMENT_NAME

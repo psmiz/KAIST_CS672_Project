@@ -13,6 +13,6 @@ WANDB_API_KEY=INSERT_KEY_HERE python scripts/training/train_text_generation.py \
 --base_path_to_store_results $BASE_PATH \
 --project_name $PROJECT_NAME \
 --experiment_name $EXPERIMENT_NAME \
---entity_name feyzaakyurek \
+--entity_name fisma-korea-advanced-institute-of-science-and-technology \
 --log_to_wandb > $EXPERIMENT_FOLDER/log.out 2>&1
 
