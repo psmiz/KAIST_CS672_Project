@@ -57,8 +57,8 @@ class EditMatchMetric(BaseMetric):
             self.prompt = f.read()
 
         # Check key is valid.
-        if self.model_name != "code-davinci-002":
-            raise ValueError("You will be charged by OpenAI for this run.")
+        #if self.model_name != "code-davinci-002":
+        #    raise ValueError("You will be charged by OpenAI for this run.")
 
         # Load cache from cache_path.
         if os.path.exists(self.cache_path):
@@ -538,7 +538,7 @@ if __name__ == "__main__":
         "prompt_path": "data/interscript/prompts_edit_numeric.txt",
         "separator": "\n\n---\n\n",
         "openai_key": "openai_key_me",
-        "gpt3_model_name": "code-davinci-002",
+        "gpt3_model_name": "gpt-3.5-turbo-instruct",
         "cache_path": "data/interscript/cache.json",
         # "cache_path": "data/interscript/cache_prompts_edit_functional_test.json",
     }

@@ -10,4 +10,5 @@ alphabetize_output/
 __pycache__/
 *.pyc
 *.pyo
+test.py
 
