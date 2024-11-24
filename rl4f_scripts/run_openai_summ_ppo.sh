@@ -7,6 +7,8 @@
 # - prompt_path (x2) in config file to point to the ../prompts_edit_instructional_novo.txt
 # - cache_path (x2) for storing generations in config file.
 
+WANDB_KEY=$(<wandb_key)
+
 # Output path.
 BASE_PATH="./openai_summ_output"
 
@@ -17,10 +19,10 @@ EXPERIMENT_NAME="t5large_rl4lm_lr10e6_rougeC_supervised_gen_args_me_48g"
 mkdir -p $BASE_PATH/$PROJECT_NAME/$EXPERIMENT_NAME
 
 
-WANDB_API_KEY=INSERT_WANDB_KEY_HERE python scripts/training/train_text_generation.py \
+WANDB_API_KEY=$WANDB_KEY python scripts/training/train_text_generation.py \
 --base_path_to_store_results $BASE_PATH \
 --config_path scripts/training/task_configs/openai_summ/t5_ppo_on_supervised.yml \
 --project_name $PROJECT_NAME \
 --experiment_name $EXPERIMENT_NAME \
 --entity_name fisma-korea-advanced-institute-of-science-and-technology \
---log_to_wandb > $BASE_PATH/$PROJECT_NAME/$EXPERIMENT_NAME/log.out 2>&1
+--log_to_wandb #> $BASE_PATH/$PROJECT_NAME/$EXPERIMENT_NAME/log.out 2>&1
