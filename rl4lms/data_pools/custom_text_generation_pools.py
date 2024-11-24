@@ -24,7 +24,7 @@ class Interscript(TextGenPool):
         max_size: int = None,
     ):
         # Read the data
-        os = getenv('HOME')        
+        HOME = os.getenv('HOME')        
         if split == "train":
             pth = f"{HOME}/KAIST_CS672_Project/feedback/data/interscript/train_n1158_target_edit_numeric_group_goal_steps_{stage}.json"
         elif split == "val":
