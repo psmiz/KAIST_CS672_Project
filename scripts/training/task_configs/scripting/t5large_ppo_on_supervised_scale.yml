@@ -8,11 +8,11 @@ reward_fn:
   id: editmatch
   args:
     metric:
-      prompt_path: ".data/interscript/prompts_edit_numeric.txt"
+      prompt_path: "data/interscript/prompts_edit_numeric.txt"
       separator: "\n\n---\n\n"
       downstream_metric_name: rouge_combined
-      openai_key: openai_key_pet
-      gpt3_model_name: code-davinci-002
+      openai_key: openai_key
+      gpt3_model_name: gpt-3.5-turbo-instruct
       cache_path: "./interscript_output/cache_pet.json"
       save_path: ""
     tokenizer:
@@ -81,8 +81,8 @@ train_evaluation:
         prompt_path: "./data/interscript/prompts_edit_numeric.txt"
         separator: "\n\n---\n\n"
         downstream_metric_name: rouge_combined
-        openai_key: openai_key_pet
-        gpt3_model_name: code-davinci-002
+        openai_key: openai_key
+        gpt3_model_name: gpt-3.5-turbo-instruct
         cache_path: "./interscript_output/cache_pet.json"
         save_path: ""
     # - id: bert_score

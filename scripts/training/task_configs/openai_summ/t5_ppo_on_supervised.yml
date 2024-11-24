@@ -13,7 +13,7 @@ reward_fn:
       separator: "\n\n---\n\n"
       downstream_metric_name: rouge_combined
       openai_key: openai_key
-      gpt3_model_name: code-davinci-002
+      gpt3_model_name: gpt-3.5-turbo-instruct
       cache_path: "./openai_summ_output/cache_me.json"
       save_path: ""
       append_feedback_to_q: True
@@ -84,7 +84,7 @@ train_evaluation:
         separator: "\n\n---\n\n"
         downstream_metric_name: rouge_combined
         openai_key: openai_key
-        gpt3_model_name: code-davinci-002
+        gpt3_model_name: gpt-3.5-turbo-instruct
         cache_path: "./openai_summ_output/cache_me.json"
         save_path: ""
         append_feedback_to_q: True

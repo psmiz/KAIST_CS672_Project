@@ -7,17 +7,19 @@
 # - prompt_path (x2) in config file to point to the ../prompts_edit_numeric.txt
 # - cache_path (x2) for storing generations in config file.
 
+WANDB_KEY=$(<wandb_key)
+
 BASE_PATH="./interscript_output"
 PROJECT_NAME="interscript_ppo_scale"
 EXPERIMENT_NAME="t5large_lr5e7_pet"
 
 mkdir -p $BASE_PATH/$PROJECT_NAME/$EXPERIMENT_NAME
 
-WANDB_API_KEY=INSERT_KEY_HERE python scripts/training/train_text_generation.py \
+WANDB_API_KEY=$WANDB_KEY python scripts/training/train_text_generation.py \
 --config_path scripts/training/task_configs/scripting/t5large_ppo_on_supervised_scale.yml \
 --base_path_to_store_results $BASE_PATH \
 --project_name $PROJECT_NAME \
 --experiment_name $EXPERIMENT_NAME \
 --entity_name fisma-korea-advanced-institute-of-science-and-technology \
---log_to_wandb > $BASE_PATH/$PROJECT_NAME/$EXPERIMENT_NAME/log.out 2>&1
+--log_to_wandb #> $BASE_PATH/$PROJECT_NAME/$EXPERIMENT_NAME/log.out 2>&1
 
