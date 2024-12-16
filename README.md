@@ -1,18 +1,4 @@
-# RL4F: Generating Natural Language Feedback with Reinforcement Learning
-
-Code repository for the [ACL 2023 paper](https://aclanthology.org/2023.acl-long.427/) "RL4F: Generating Natural Language Feedback with Reinforcement Learning". Afra Feyza Akyurek, Ekin Akyurek, Aman Madaan, Ashwin Kalyan, Peter Clark, Derry Wijaya, Niket Tandon. Check out the [project page](https://feyzaakyurek.github.io/rl4f-blog/) for a brief introduction.
-
-![](method_full.png)
-
-This codebase is primarily based on the [RL4LMs](https://github.com/allenai/RL4LMs) repository. We provide custom data classes and reward functions to implement RL4F.
-
-## Installation
-
-```bash
-git clone https://github.com/feyzaakyurek/rl4f.git
-cd rl4f
-pip install -e .
-```
+# Continual Learning of Critics (CS672 Course Project)
 
 ## Introduction to the Codebase
 
@@ -29,15 +15,4 @@ pip install -e .
 
 ## Running Experiments
 
-### Datasets
-Download data from this [link](https://drive.google.com/drive/folders/1Rl5j7r8RqvOhQUQPRhK8AEoD5-bjAuDI?usp=sharing). For checkpoints reach out to me at feyzatoksal at gmail dot com.
-
 All scripts can be found under `rl4f_scripts`. For example, check out the `rl4f_scripts/run_alphabetize_sup.sh` script for warm-starting a pretrained T5-large for supervised critique generation for alphabetization. Alternatively, you can load the released checkpoint from the above drive link. For PPO training, specify the checkpoint at `scripts/training/task_configs/alphabetize/t5large_ppo_on_supervised.yaml` and run `rl4f_scripts/run_alphabetize_ppo.sh`.
-
-
-## FAQ
-If you are receiving an error about your torch installation not supporting sm_86, try uninstalling torch and reinstalling with conda using the cudatoolkit that matches your environment. E.g.
-
-```
-conda install pytorch==1.11.0 cudatoolkit=11.3 -c pytorch
-```
