@@ -278,7 +278,12 @@ class SupervisedTrainer:
         model_cls = AutoModelForCausalLM if self._alg_config[
             "model_type"] == "causal" else AutoModelForSeq2SeqLM
         self._gen_kwargs = self._alg_config["generation_kwargs"]
-        self._model = model_cls.from_pretrained(self._alg_config["model_name"])
+        
+        #local_model_path = "./tmp/alpha"  # Replace with the actual local directory path
+        local_model_path = "./tmp/summ"
+        self._model = model_cls.from_pretrained(local_model_path)
+
+        #self._model = model_cls.from_pretrained(self._alg_config["model_name"])
         self._model.parallelize()
         self._eval_batch_size = self._train_eval_config["eval_batch_size"]
 

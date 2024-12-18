@@ -52,7 +52,7 @@ alg:
   policy:
     id: seq2seq_lm_actor_critic_policy
     args:
-      model_name: ./alphabetize_output/alphabetize_sup_scale/t5large_bs32_wd0.01_lr1e-5_beam5_min5_max_20_seed0/model
+      model_name: ./tmp/alpha
       apply_model_parallel: True
       prompt_truncation_side: "right"
       optimizer_kwargs:

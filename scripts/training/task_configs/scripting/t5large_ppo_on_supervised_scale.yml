@@ -52,7 +52,7 @@ alg:
   policy:
     id: seq2seq_lm_actor_critic_policy
     args:
-      model_name: "./interscript_output/interscript_sup_scale/t5large_bs6_wd0.01_lr1e-5_beam5_min5_max_100_seed0/model"
+      model_name: "/root/KAIST_CS672_Project/tmp/alpha"
       apply_model_parallel: True
       prompt_truncation_side: "right"
       optimizer_kwargs:
@@ -67,9 +67,9 @@ alg:
 train_evaluation:
   eval_batch_size: 64
   seed: 0
-  n_iters: 100
-  eval_every: 2
-  save_every: 2
+  n_iters: 50
+  eval_every: 5
+  save_every: 5
   metrics:
     # - id: meteor
     #   args: {}
@@ -85,14 +85,15 @@ train_evaluation:
         gpt3_model_name: gpt-3.5-turbo-instruct
         cache_path: "./interscript_output/cache.json"
         save_path: ""
-    # - id: bert_score
-    #   args:
-    #     language: en
+    - id: bert_score
+      args:
+        language: en
+    
     # - id: bleurt
     #   args:
     #     config_name: bleurt-large-512
-    - id: diversity
-      args: {}
+    #- id: diversity
+    #  args: {}
     # - id: summaCZS
     #   args:
     #     granularity: sentence
