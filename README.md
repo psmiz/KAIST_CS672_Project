@@ -16,3 +16,10 @@
 ## Running Experiments
 
 All scripts can be found under `rl4f_scripts`. For example, check out the `rl4f_scripts/run_alphabetize_sup.sh` script for warm-starting a pretrained T5-large for supervised critique generation for alphabetization. Alternatively, you can load the released checkpoint from the above drive link. For PPO training, specify the checkpoint at `scripts/training/task_configs/alphabetize/t5large_ppo_on_supervised.yaml` and run `rl4f_scripts/run_alphabetize_ppo.sh`.
+
+## Augmented MATH Dataset
+
+For future research, we have included an augmented version of the 
+[MATH dataset](https://arxiv.org/abs/2103.03874). The augmented data
+follows the format of the Alphabetization task.
+For more information, view the [MATH_RL directory](MATH_RL/) in this repository.
