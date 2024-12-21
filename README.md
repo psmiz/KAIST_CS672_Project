@@ -25,5 +25,6 @@ All scripts can be found under `rl4f_scripts`. For example, check out the `rl4f_
 
 For future research, we have included an augmented version of the 
 [MATH dataset](https://arxiv.org/abs/2103.03874). The augmented data
-follows the format of the Alphabetization task.
+follows the format of the Alphabetization task. See `augment_data.ipynb`
+for the exact augmentation method.
 For more information, view the [MATH_RL directory](MATH_RL/) in this repository.
