@@ -2,8 +2,9 @@
 
 ## Introduction to the Codebase
 
-rl4ms library can be downloaded at : [link](https://github.com/allenai/RL4LMs).
-necessary data is available at : [link](https://drive.google.com/drive/folders/1Rl5j7r8RqvOhQUQPRhK8AEoD5-bjAuDI?usp=sharing).
+rl4lms library can be downloaded at : [rl4lms-link](https://github.com/allenai/RL4LMs).
+
+necessary data is available at : [data-link](https://drive.google.com/drive/folders/1Rl5j7r8RqvOhQUQPRhK8AEoD5-bjAuDI?usp=sharing).
 
 `rl4lms/data_pools/custom_text_generation_pools.py`: This file contains custom dataset loading classes. Make sure to specify the correct data paths in respective classes.
 
